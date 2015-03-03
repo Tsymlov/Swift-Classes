@@ -22,3 +22,13 @@ func globalFunc()->()->(){
     }
     return nestedFunc
 }
+
+func doMathOperation(){
+    var j = 10
+    func multiplyJ(i: Int){
+        j = j * i
+    }
+    multiplyJ(20)
+    println("j = \(j)")
+}
+doMathOperation()
