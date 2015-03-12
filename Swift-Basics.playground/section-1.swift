@@ -12,6 +12,24 @@ println(UInt.max)
 println(Int.min)
 println(Int.max)
 
+let x: Int8 = 100
+var y: Int16
+y = Int16(x)
+//y += x // Ошибка
+y += Int16(x)
+let pi = 3.14
+//y = pi // Ошибка
+y = Int16(pi)
+
+let color = (0.0, 1.0, 1.0 , 0.0)
+let (r, g, b, a) = color
+println("r = \(r) g = \(g) b = \(b) a = \(a)")
+let (_, _, _, alphaChanel) = color
+println("Alpha chanel: \(alphaChanel)")
+println("r = \(color.0) g = \(color.1) b = \(color.2) a = \(color.3)")
+let anotherColor = (red: 0.0, blue: 1.0, green: 1.0 , alpha: 0.0)
+println("r = \(color.red) g = \(color.green) b = \(color.blue) a = \(color.alpha)")
+
 var i: Int? // знак вопроса говорит, что Int - опциональный
 i = nil // и мы можем присвоить nil
 i = 100 // или значение
