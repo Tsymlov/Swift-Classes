@@ -11,12 +11,16 @@ anotherDigits += digits
 anotherDigits[0]
 anotherDigits.last
 anotherDigits.first
+let subArray = anotherDigits[1..<4]
 anotherDigits[0] = "0"
 anotherDigits[0...5] = ["0"]
 println(anotherDigits)
+anotherDigits.replaceRange(1...3, with: ["1", "2", "3", "4", "5"])
 //anotherDigits[99] // Ошибка времени выполнения
 anotherDigits.insert("0", atIndex: 1)
+anotherDigits.splice(["4", "5", "6"], atIndex: 2)
 let zero = anotherDigits.removeAtIndex(0)
+anotherDigits.removeRange(2...4)
 let three = anotherDigits.removeLast()
 
 for digit in digits {
@@ -43,3 +47,7 @@ class Foo {}
 //find([Foo(), Foo(), Foo()], Foo()) // Ошибка
 
 contains(digits, "3")
+
+var mutableDigits = digits
+mutableDigits.sort({$0>$1})
+println(mutableDigits)
