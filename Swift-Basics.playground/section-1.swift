@@ -17,10 +17,15 @@ var y: Int16
 y = Int16(x)
 //y += x // Ошибка
 y += Int16(x)
+let double = Double(y)
 let pi = 3.14
 //y = pi // Ошибка
 y = Int16(pi)
 let z = "12345".toInt() ?? 0
+let s1 = String(12345)
+let s2 = "\(12345)"
+let array = Array("xyz")
+let str = String(["x", "y", "z"])
 
 let color = (0.0, 1.0, 1.0 , 0.0)
 let (r, g, b, a) = color
