@@ -20,6 +20,7 @@ y += Int16(x)
 let pi = 3.14
 //y = pi // Ошибка
 y = Int16(pi)
+let z = "12345".toInt() ?? 0
 
 let color = (0.0, 1.0, 1.0 , 0.0)
 let (r, g, b, a) = color
@@ -28,7 +29,7 @@ let (_, _, _, alphaChanel) = color
 println("Alpha chanel: \(alphaChanel)")
 println("r = \(color.0) g = \(color.1) b = \(color.2) a = \(color.3)")
 let anotherColor = (red: 0.0, blue: 1.0, green: 1.0 , alpha: 0.0)
-println("r = \(color.red) g = \(color.green) b = \(color.blue) a = \(color.alpha)")
+println("r = \(anotherColor.red) g = \(anotherColor.green) b = \(anotherColor.blue) a = \(anotherColor.alpha)")
 
 var i: Int? // знак вопроса говорит, что Int - опциональный
 i = nil // и мы можем присвоить nil

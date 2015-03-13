@@ -51,3 +51,14 @@ contains(digits, "3")
 var mutableDigits = digits
 mutableDigits.sort({$0>$1})
 println(mutableDigits)
+
+let zeroes = mix.filter({$0 == 0})
+println(zeroes)
+
+let transformedArray = anotherDigits.map{ $0.toInt() ?? 0 }
+println(transformedArray)
+
+let sum = transformedArray.reduce(0, combine: {$0+$1})
+println(sum)
+
+
