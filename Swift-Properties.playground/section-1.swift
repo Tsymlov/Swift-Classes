@@ -1,3 +1,5 @@
+import Foundation
+
 struct User {
     var firstName: String
     var lastName: String
@@ -21,3 +23,13 @@ billGates.lastName = ""
 
 println(billGates.fullName)
 billGates.fullName = "Bill Gates"
+
+class FileSystemHelper {
+    
+    lazy var fm0 = NSFileManager()
+    lazy var fm1 = NSFileManager.defaultManager()
+    lazy var fm2: NSFileManager = {return NSFileManager.defaultManager()}()
+    lazy var one = 1
+}
+
+let helper = FileSystemHelper()
