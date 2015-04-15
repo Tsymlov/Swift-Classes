@@ -33,3 +33,15 @@ class FileSystemHelper {
 }
 
 let helper = FileSystemHelper()
+
+class Message {
+    var length: Int!
+    var text: String!{
+        willSet{
+            length = countElements(newValue)
+        }
+        didSet{
+            println(oldValue)
+        }
+    }
+}
