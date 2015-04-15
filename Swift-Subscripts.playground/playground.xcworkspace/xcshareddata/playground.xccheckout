@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93E44F3C-6DE3-4167-B645-2B8F433561BD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>playground</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9861529A85558E557C85D53FA170925F6DB3847A</key>
+		<string>https://github.com/Tsymlov/Swift-Classes.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Swift-Subscripts.playground/playground.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9861529A85558E557C85D53FA170925F6DB3847A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Tsymlov/Swift-Classes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9861529A85558E557C85D53FA170925F6DB3847A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9861529A85558E557C85D53FA170925F6DB3847A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swift-Classes</string>
+		</dict>
+	</array>
+</dict>
+</plist>
