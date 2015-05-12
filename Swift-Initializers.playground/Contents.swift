@@ -43,8 +43,17 @@ class Chat {
 }
 
 class ChatRoom: Chat {
-    init(id: Int){
+    override init(id: Int){
         super.init(id: id)
-//        id = 7 //Error: Cannot assign to 'let' value 'id'
+//        id = 7 //Cannot assign to 'let' value 'id'
     }
 }
+
+
+struct Story {
+    var user: User
+    var message: Message
+    var id: Int
+}
+
+let story = Story(user: User(), message: Message(), id: 0)
