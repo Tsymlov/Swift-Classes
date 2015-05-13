@@ -54,6 +54,18 @@ struct Story {
     var user: User
     var message: Message
     var id: Int
+    
+    init (user: User, message: Message, id: Int){
+        self.user = user
+        self.message = message
+        self.id = id
+    }
+    
+    init(user: User, message: Message){
+        let defaultID = 0
+        self.init(user: user, message: message, id: defaultID)
+    }
 }
 
-let story = Story(user: User(), message: Message(), id: 0)
+let story = Story(user: User(), message: Message(), id: 6)
+let anotherStory = Story(user: User(), message: Message())
