@@ -61,4 +61,6 @@ println(transformedArray)
 let sum = transformedArray.reduce(0, combine: {$0+$1})
 println(sum)
 
-
+let digitNames = [1: "One", 2: "Two", 3: "Three"]
+digitNames.count
+digitNames.isEmpty
