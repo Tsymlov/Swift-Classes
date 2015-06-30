@@ -61,6 +61,45 @@ println(transformedArray)
 let sum = transformedArray.reduce(0, combine: {$0+$1})
 println(sum)
 
-let digitNames = [1: "One", 2: "Two", 3: "Three"]
+var digitNames = [1: "One", 2: "Two", 3: "Three"]
 digitNames.count
 digitNames.isEmpty
+digitNames[4] = "For"
+digitNames[4] = "Four"
+digitNames.updateValue("Fiv", forKey: 5)
+digitNames.updateValue("Five", forKey: 5)//return "Fiv"
+digitNames[6]
+if let six = digitNames[6]{
+    println("6 is \(six)")
+}else{
+    println("What does 6 mean?")
+}
+digitNames[5] = nil
+println(digitNames)
+digitNames.removeValueForKey(4)
+println(digitNames)
+
+var anotherDic = [Int:Int]() // предпочтительней
+var dic = Dictionary<Int,Int>()
+
+for (digit, name) in digitNames{
+    println("\(digit):\(name) ")
+}
+
+for digit in digitNames.keys{
+    println(digit)
+}
+
+for name in digitNames.values{
+    println(name)
+}
+
+var digs = [Int](digitNames.keys)
+let names = [String](digitNames.values)
+
+digs.sort(){$0<$1}
+for dig in digs{
+    println(digitNames[dig])
+}
+let sortedKeysAndValues = sorted(digitNames){ $0.0 < $1.0 }
+println(sortedKeysAndValues)
