@@ -4,6 +4,11 @@ func getFullName(firstName: String, secondName: String, lastName: String)->Strin
 
 getFullName("Thomas", "John", "Anderson")
 
+func getTransparentColor(r: Double, g: Double, b: Double)->(Double, Double, Double, Double){
+    return (r, g, b, 0.0)
+}
+getTransparentColor(1.0, 0.0, 0.0)
+
 let gettingFunction = getFullName
 gettingFunction("Tim", "", "Cook")
 
