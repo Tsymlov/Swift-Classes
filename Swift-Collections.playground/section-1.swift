@@ -9,6 +9,8 @@ anotherDigits.append("9")
 anotherDigits += ["0"]
 anotherDigits += digits
 anotherDigits[0]
+anotherDigits[anotherDigits.count]//EXC_BAD_INSTRUCTION(code=EXC_I386_INVOP, subcode=0x0)
+
 anotherDigits.last
 anotherDigits.first
 let subArray = anotherDigits[1..<4]
