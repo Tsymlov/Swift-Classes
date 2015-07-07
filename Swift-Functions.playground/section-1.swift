@@ -19,13 +19,35 @@ func joinChatRoom(id: String, success: ()->() = {println("Joining chat room was 
 }
 joinChatRoom("10")
 
-func joinChatRoom(id: String, error: ()->() = {println("Error!")}, success:()->() = {println("Joining chat room was successful.")}){
+func joinChatRoomErr(id: String, error: ()->() = {println("Error!")}, success:()->() = {println("Joining chat room was successful.")}){
     //do something with network in parallel thread
     success()
 }
-joinChatRoom("11", success: { () -> () in
+joinChatRoomErr("11", success: { () -> () in
     println("Success for chatRoom with id 11")
 })
+
+func someFunc(params: Int...){
+    for param in params{
+        println(param)
+    }
+}
+someFunc(1,2,3,4,5,6,7,8,9,10)
+
+func incrementArray(var arr: [Int]){
+    for (index, item) in enumerate(arr){
+        arr[index] = item+1
+    }
+}
+incrementArray([1,2,3,4,5,6,7,8,9,10])
+
+func canAdd(a: Int, b: Int, inout sum: Int)->Bool{
+    sum = a+b
+    return true
+}
+var sum = 0
+var success = canAdd(1, 2, &sum)
+println(sum)
 
 let gettingFunction = getFullName
 gettingFunction("Tim", "", "Cook")
