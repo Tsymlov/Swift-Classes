@@ -9,6 +9,10 @@ func getTransparentColor(r: Double, g: Double, b: Double)->(Double, Double, Doub
 }
 getTransparentColor(1.0, 0.0, 0.0)
 
+func getTransparentColor(r: Double, _ g: Double, _ b: Double)->(Double, Double, Double, Double){
+    return (r, g, b, 0.0)
+} // For Swift 2.0
+
 let gettingFunction = getFullName
 gettingFunction("Tim", "", "Cook")
 
