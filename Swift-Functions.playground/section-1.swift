@@ -9,9 +9,23 @@ func getTransparentColor(r: Double, g: Double, b: Double)->(Double, Double, Doub
 }
 getTransparentColor(1.0, 0.0, 0.0)
 
-func getTransparentColor(r: Double, _ g: Double, _ b: Double)->(Double, Double, Double, Double){
-    return (r, g, b, 0.0)
-} // For Swift 2.0
+//func getTransparentColor(r: Double, _ g: Double, _ b: Double)->(Double, Double, Double, Double){
+//    return (r, g, b, 0.0)
+//} // For Swift 2.0
+
+func joinChatRoom(id: String, success: ()->() = {println("Joining chat room was successful.")}){
+    //do something with network in parallel thread
+    success()
+}
+joinChatRoom("10")
+
+func joinChatRoom(id: String, error: ()->() = {println("Error!"}, success:()->() = {println("Joining chat room was successful.")}){
+    //do something with network in parallel thread
+    success()
+}
+joinChatRoom("11", success: { () -> () in
+    println("Success for chatRoom with id 11")
+})
 
 let gettingFunction = getFullName
 gettingFunction("Tim", "", "Cook")
