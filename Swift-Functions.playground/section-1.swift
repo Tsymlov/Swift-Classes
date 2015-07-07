@@ -19,7 +19,7 @@ func joinChatRoom(id: String, success: ()->() = {println("Joining chat room was 
 }
 joinChatRoom("10")
 
-func joinChatRoom(id: String, error: ()->() = {println("Error!"}, success:()->() = {println("Joining chat room was successful.")}){
+func joinChatRoom(id: String, error: ()->() = {println("Error!")}, success:()->() = {println("Joining chat room was successful.")}){
     //do something with network in parallel thread
     success()
 }
