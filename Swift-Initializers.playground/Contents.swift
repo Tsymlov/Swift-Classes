@@ -69,3 +69,11 @@ struct Story {
 
 let story = Story(user: User(), message: Message(), id: 6)
 let anotherStory = Story(user: User(), message: Message())
+
+// Setting a Default Property Value with a Closure or Function
+struct SomeStruct {
+    let someProperty: String = {
+        // some action
+        return "Some Value"
+    }()
+}
