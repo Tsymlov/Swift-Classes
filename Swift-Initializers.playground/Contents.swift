@@ -1,3 +1,5 @@
+import UIKit
+
 class Message {
 //    var text: String
 //    init(){
@@ -77,3 +79,45 @@ struct SomeStruct {
         return "Some Value"
     }()
 }
+
+class Car {
+    let color: UIColor
+    
+    init(color: UIColor){
+        self.color = color
+    }
+    
+    convenience init(){
+        let c = UIColor.clearColor()
+        self.init(color: c)
+    }
+}
+
+var car = Car() // color == clear
+car = Car(color: UIColor.whiteColor())
+
+class BMW3rdSeries: Car {
+    var turboEngine: Bool
+    
+    init(color: UIColor, turbo: Bool){
+        turboEngine = turbo
+        super.init(color: color)
+    }
+    
+    override convenience init(color: UIColor){
+        self.init(color: color, turbo: false)
+    }
+}
+
+car = BMW3rdSeries(color: UIColor.blueColor(), turbo: true)
+car = BMW3rdSeries(color: UIColor.redColor()) // turbo == false
+car = BMW3rdSeries() // color == clear, turbo == false
+
+class BMWM3: BMW3rdSeries {
+    let add = "Super duper car"
+}
+
+car = BMWM3(color: UIColor.blueColor(), turbo: true)
+car = BMWM3(color: UIColor.redColor()) // turbo == false
+car = BMWM3() // color == clear, turbo == false
+
