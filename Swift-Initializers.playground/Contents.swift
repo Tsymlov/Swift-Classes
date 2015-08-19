@@ -114,6 +114,25 @@ car = BMWM3(color: UIColor.blueColor(), turbo: true)
 car = BMWM3(color: UIColor.redColor()) // turbo == false
 car = BMWM3() // color == clear, turbo == false
 
+// Failable Initializers
+class MyLovelyCar : Car{
+    let name: String
+    init?(name: String){
+        self.name = name
+        super.init(color: UIColor.blackColor())
+        if name.lowercaseString.rangeOfString("lovely") == nil {
+            return nil
+        }
+    }
+    
+//    init(name: String){
+//        // error "Invalid redeclaration of init(name:)"
+//    }
+}
+
+var myLovelyCar = MyLovelyCar(name: "My very very very lovely car")
+myLovelyCar = MyLovelyCar(name: "Just a Car") // nil
+
 // Required Initializers
 class CarInRussia {
     private let insuranceNumber: String
