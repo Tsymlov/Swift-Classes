@@ -72,14 +72,7 @@ struct Story {
 let story = Story(user: User(), message: Message(), id: 6)
 let anotherStory = Story(user: User(), message: Message())
 
-// Setting a Default Property Value with a Closure or Function
-struct SomeStruct {
-    let someProperty: String = {
-        // some action
-        return "Some Value"
-    }()
-}
-
+// Inheritance and Initialization
 class Car {
     let color: UIColor
     
@@ -120,4 +113,35 @@ class BMWM3: BMW3rdSeries {
 car = BMWM3(color: UIColor.blueColor(), turbo: true)
 car = BMWM3(color: UIColor.redColor()) // turbo == false
 car = BMWM3() // color == clear, turbo == false
+
+// Required Initializers
+class CarInRussia {
+    private let insuranceNumber: String
+    private var hasTechPassport = false
+    required init(insuranceNumber: String){
+        self.insuranceNumber = insuranceNumber
+    }
+    required convenience init(insuranceNumber: String, techPassportNumber: String){
+        self.init(insuranceNumber: insuranceNumber)
+        hasTechPassport = !techPassportNumber.isEmpty
+    }
+}
+
+class LadaKalina: CarInRussia {
+    required convenience init(insuranceNumber: String, techPassportNumber: String){
+        self.init(insuranceNumber: insuranceNumber)
+        hasTechPassport = count(techPassportNumber) >= 8
+    }
+}
+
+var myKalina = LadaKalina(insuranceNumber: "123")
+myKalina = LadaKalina(insuranceNumber: "123", techPassportNumber: "12345678")
+
+// Setting a Default Property Value with a Closure or Function
+struct SomeStruct {
+    let someProperty: String = {
+        // some action
+        return "Some Value"
+        }()
+}
 
