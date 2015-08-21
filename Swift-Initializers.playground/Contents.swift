@@ -133,6 +133,32 @@ class MyLovelyCar : Car{
 var myLovelyCar = MyLovelyCar(name: "My very very very lovely car")
 myLovelyCar = MyLovelyCar(name: "Just a Car") // nil
 
+class HerLovelyCar : MyLovelyCar {
+    let interiorColor: UIColor
+    init?(name: String, interiorColor: UIColor = UIColor.purpleColor()){
+        self.interiorColor = interiorColor
+        super.init(name: name)
+        if interiorColor == UIColor.clearColor() {
+            return nil
+        }
+    }
+
+    convenience init?(){
+        self.init(name: "lovely")
+    }
+
+//    convenience init(){
+//        self.init(name: "lovely") // Error! A non-failable init cannot delegate to failable init.
+//    }
+}
+
+var hlc = HerLovelyCar(name: "")
+hlc = HerLovelyCar(name: "pinky", interiorColor: UIColor.clearColor())
+hlc = HerLovelyCar(name: "pinky", interiorColor: UIColor.redColor())
+hlc = HerLovelyCar(name: "lovely pinky", interiorColor: UIColor.redColor())
+
+hlc = HerLovelyCar()
+
 // Required Initializers
 class CarInRussia {
     private let insuranceNumber: String
