@@ -116,13 +116,18 @@ car = BMWM3() // color == clear, turbo == false
 
 // Failable Initializers
 class MyLovelyCar : Car{
-    let name: String
+    var name: String = ""
     init?(name: String){
         self.name = name
         super.init(color: UIColor.blackColor())
         if name.lowercaseString.rangeOfString("lovely") == nil {
             return nil
         }
+    }
+    
+    override init(color: UIColor){
+        super.init(color: color)
+        name = ""
     }
     
 //    init(name: String){
@@ -143,9 +148,9 @@ class HerLovelyCar : MyLovelyCar {
         }
     }
 
-    convenience init?(){
-        self.init(name: "lovely")
-    }
+//    convenience init?(){
+//        self.init(name: "lovely")
+//    }
 
 //    convenience init(){
 //        self.init(name: "lovely") // Error! A non-failable init cannot delegate to failable init.
@@ -157,7 +162,29 @@ hlc = HerLovelyCar(name: "pinky", interiorColor: UIColor.clearColor())
 hlc = HerLovelyCar(name: "pinky", interiorColor: UIColor.redColor())
 hlc = HerLovelyCar(name: "lovely pinky", interiorColor: UIColor.redColor())
 
-hlc = HerLovelyCar()
+//hlc = HerLovelyCar()
+
+class OurLovelyCar : MyLovelyCar{
+    let interiorColor = UIColor.whiteColor()
+//    override init?(name: String) { // It works.
+//        super.init(name: name + "lovely")
+//    }
+ 
+//    override init(name: String){ // Error! Нельзя вызывать super.init?(name:) внутри non-failable init
+//        super.init(name: name + "lovely")
+//    }
+    
+    override init(name: String){
+        // Если поменять let name на var name в классе MyLovleCar то все будет работать.
+        // И добавить init(color:)
+        super.init(color: UIColor.blackColor())
+        self.name = name
+    }
+}
+
+var olc = OurLovelyCar(name: "pinky")
+olc = OurLovelyCar(name: "")
+
 
 // Required Initializers
 class CarInRussia {
