@@ -4,15 +4,18 @@ if empty.isEmpty{
     print("It's empty")
 }
 
-let response = "{\"_id\" = 5449b3;}"
+var response = "{\"_id\" = 5449b3;}"
 for char in response.characters {
     print(char)
 }
 
-let myArrayOfCharacters = Array(arrayLiteral: response)
+print(response.characters.first)
 
 var kissingEyes: Character = "😚"
 let smilingEyes: Character = "😄"
+
+//response += kissingEyes // нельзя т.к. разные типы
+response.append(kissingEyes)
 
 let id = 1234
 let json = "{\"_id\": \"\(id)\"}"
