@@ -5,12 +5,12 @@ var red = 1.0, green = 1.0, blue = 1.0, alpha = 1.0
 
 var chatName, backButton, messageText: String
 
-println("Максимальное количество сообщений в этом окне \(maxMessagesInChatScreen)")
+print("Максимальное количество сообщений в этом окне \(maxMessagesInChatScreen)")
 
-println(UInt.min)
-println(UInt.max)
-println(Int.min)
-println(Int.max)
+print(UInt.min)
+print(UInt.max)
+print(Int.min)
+print(Int.max)
 
 let x: Int8 = 100
 var y: Int16
@@ -21,20 +21,21 @@ let double = Double(y)
 let pi = 3.14
 //y = pi // Ошибка
 y = Int16(pi)
-let z = "12345".toInt() ?? 0
+//let z = "12345".toInt() ?? 0 // Перестало работать в Swift 2.0
+let z = Int("12345")
 let s1 = String(12345)
 let s2 = "\(12345)"
-let array = Array("xyz")
+let array = Array(arrayLiteral: "xyz")
 let str = String(["x", "y", "z"])
 
 let color = (0.0, 1.0, 1.0 , 0.0)
 let (r, g, b, a) = color
-println("r = \(r) g = \(g) b = \(b) a = \(a)")
+print("r = \(r) g = \(g) b = \(b) a = \(a)")
 let (_, _, _, alphaChanel) = color
-println("Alpha chanel: \(alphaChanel)")
-println("r = \(color.0) g = \(color.1) b = \(color.2) a = \(color.3)")
+print("Alpha chanel: \(alphaChanel)")
+print("r = \(color.0) g = \(color.1) b = \(color.2) a = \(color.3)")
 let anotherColor = (red: 0.0, blue: 1.0, green: 1.0 , alpha: 0.0)
-println("r = \(anotherColor.red) g = \(anotherColor.green) b = \(anotherColor.blue) a = \(anotherColor.alpha)")
+print("r = \(anotherColor.red) g = \(anotherColor.green) b = \(anotherColor.blue) a = \(anotherColor.alpha)")
 
 var i: Int? // знак вопроса говорит, что Int - опциональный
 i = nil // и мы можем присвоить nil
