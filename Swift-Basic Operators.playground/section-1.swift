@@ -1,12 +1,12 @@
 var messageText: String? = nil
-println(messageText ?? "")
+print(messageText ?? "")
 messageText = "Hi!"
-println(messageText ?? "")
+print(messageText ?? "")
 
 for i in 1...50{
     // do smth
 }
 
 for i in 0..<["One", "Tho", "Freddy's coming for you"].count{
-    println("Index = \(i)")
+    print("Index = \(i)")
 }
