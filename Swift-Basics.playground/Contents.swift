@@ -6,6 +6,8 @@ var red = 1.0, green = 1.0, blue = 1.0, alpha = 1.0
 var chatName, backButton, messageText: String
 
 print("Максимальное количество сообщений в этом окне \(maxMessagesInChatScreen)")
+print(1,2,3,4,5, separator: "+", terminator: "=") //1+2+3+4+5=
+print(1+2+3+4+5)
 
 print(UInt.min)
 print(UInt.max)
