@@ -1,15 +1,15 @@
 var empty = ""
 var emptyToo = String()
 if empty.isEmpty{
-    println("It's empty")
+    print("It's empty")
 }
 
 let response = "{\"_id\" = 5449b3;}"
-for char in response {
-    println(char)
+for char in response.characters {
+    print(char)
 }
 
-let myArrayOfCharacters = Array(response)
+let myArrayOfCharacters = Array(arrayLiteral: response)
 
 var kissingEyes: Character = "😚"
 let smilingEyes: Character = "😄"
@@ -17,16 +17,16 @@ let smilingEyes: Character = "😄"
 let id = 1234
 let json = "{\"_id\": \"\(id)\"}"
 
-countElements(response)
+response.characters.count
 
-countElements("😚".utf16)
-countElements("😚")
+"😚".utf16.count
+"😚".characters.count
 
 if response == json {
-    println("Equal")
+    print("Equal")
 }
 else {
-    println("Not equal")
+    print("Not equal")
 }
 
 response.hasSuffix("}")
