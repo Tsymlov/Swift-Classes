@@ -103,6 +103,15 @@ digs.sort(){$0<$1}
 for dig in digs{
     print(digitNames[dig])
 }
-//-------let sortedKeysAndValues = sorted(digitNames){ $0.0 < $1.0 }
+
 let sortedKeysAndValues = digitNames.sort{ $0.0 < $1.0 }
 print(sortedKeysAndValues)
+
+let someSet = Set<String>()
+var vendors: Set = ["Apple", "Samsung", "Microsoft"]
+vendors.insert("Motorola")
+vendors.count
+vendors.isEmpty
+vendors.remove("Microsoft")
+vendors.removeAll()
+vendors.contains("Apple")
