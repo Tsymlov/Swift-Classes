@@ -1,3 +1,4 @@
+/// Gets full name
 func getFullName(firstName: String, secondName: String, lastName: String)->String{
     return firstName + " " + secondName + " " + lastName
 }
