@@ -109,9 +109,25 @@ print(sortedKeysAndValues)
 
 let someSet = Set<String>()
 var vendors: Set = ["Apple", "Samsung", "Microsoft"]
+print(vendors)
 vendors.insert("Motorola")
 vendors.count
 vendors.isEmpty
 vendors.remove("Microsoft")
-vendors.removeAll()
+//vendors.removeAll()
 vendors.contains("Apple")
+for vendor in vendors{
+    print(vendor)
+}
+vendors.insert("Atari")
+vendors.insert("Gogle")
+vendors.sort()
+let x: Set = [0,1,2,3,4,5]
+let y: Set = [-5,-4,-3,-2,-1,0]
+x.intersect(y)
+x.exclusiveOr(y)
+x.union(y)
+x.subtract(y)
+x == y
+x.isSubsetOf(y)
+x.isSupersetOf(y)
