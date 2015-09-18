@@ -51,6 +51,7 @@ class Foo {}
 digits.contains("3")
 
 var mutableDigits = digits
+mutableDigits.sort()
 mutableDigits.sort({$0>$1})
 print(mutableDigits)
 
