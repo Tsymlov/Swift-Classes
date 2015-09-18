@@ -16,23 +16,23 @@ anotherDigits.first
 let subArray = anotherDigits[1..<4]
 anotherDigits[0] = "0"
 anotherDigits[0...5] = ["0"]
-println(anotherDigits)
+print(anotherDigits)
 anotherDigits.replaceRange(1...3, with: ["1", "2", "3", "4", "5"])
 //anotherDigits[99] // Ошибка времени выполнения
 anotherDigits.insert("0", atIndex: 1)
-anotherDigits.splice(["4", "5", "6"], atIndex: 2)
+anotherDigits.insertContentsOf(["4", "5", "6"], at: 2)
 let zero = anotherDigits.removeAtIndex(0)
 anotherDigits.removeRange(2...4)
 let three = anotherDigits.removeLast()
 
 for digit in digits {
-    println(digit)
+    print(digit)
 }
-for (index, value) in enumerate(digits){
-    println("Index: \(index) and value: \(value)")
+for (index, value) in digits.enumerate(){
+    print("Index: \(index) and value: \(value)")
 }
 for var index = 0; index < digits.count; ++index{
-   println("Index: \(index) and value: \(digits[index])")
+   print("Index: \(index) and value: \(digits[index])")
 }
 
 let empty = Array<Int>()
@@ -44,24 +44,24 @@ var someZeroes = [Int](count: 8, repeatedValue: 0)
 var mix = someOnes + someZeroes
 //var wrongMix = someOnes + digits // Ошибка
 
-find(digits, "3")
+digits.indexOf("3")
 class Foo {}
-//find([Foo(), Foo(), Foo()], Foo()) // Ошибка
+//digits.indexOf([Foo(), Foo(), Foo()], Foo()) // Ошибка
 
-contains(digits, "3")
+digits.contains("3")
 
 var mutableDigits = digits
 mutableDigits.sort({$0>$1})
-println(mutableDigits)
+print(mutableDigits)
 
 let zeroes = mix.filter({$0 == 0})
-println(zeroes)
+print(zeroes)
 
-let transformedArray = anotherDigits.map{ $0.toInt() ?? 0 }
-println(transformedArray)
+let transformedArray = anotherDigits.map{ Int($0) ?? 0 }
+print(transformedArray)
 
 let sum = transformedArray.reduce(0, combine: {$0+$1})
-println(sum)
+print(sum)
 
 var digitNames = [1: "One", 2: "Two", 3: "Three"]
 digitNames.count
@@ -72,28 +72,28 @@ digitNames.updateValue("Fiv", forKey: 5)
 digitNames.updateValue("Five", forKey: 5)//return "Fiv"
 digitNames[6]
 if let six = digitNames[6]{
-    println("6 is \(six)")
+    print("6 is \(six)")
 }else{
-    println("What does 6 mean?")
+    print("What does 6 mean?")
 }
 digitNames[5] = nil
-println(digitNames)
+print(digitNames)
 digitNames.removeValueForKey(4)
-println(digitNames)
+print(digitNames)
 
 var anotherDic = [Int:Int]() // предпочтительней
 var dic = Dictionary<Int,Int>()
 
 for (digit, name) in digitNames{
-    println("\(digit):\(name) ")
+    print("\(digit):\(name) ")
 }
 
 for digit in digitNames.keys{
-    println(digit)
+    print(digit)
 }
 
 for name in digitNames.values{
-    println(name)
+    print(name)
 }
 
 var digs = [Int](digitNames.keys)
@@ -101,7 +101,8 @@ let names = [String](digitNames.values)
 
 digs.sort(){$0<$1}
 for dig in digs{
-    println(digitNames[dig])
+    print(digitNames[dig])
 }
-let sortedKeysAndValues = sorted(digitNames){ $0.0 < $1.0 }
-println(sortedKeysAndValues)
+//-------let sortedKeysAndValues = sorted(digitNames){ $0.0 < $1.0 }
+let sortedKeysAndValues = digitNames.sort{ $0.0 < $1.0 }
+print(sortedKeysAndValues)
