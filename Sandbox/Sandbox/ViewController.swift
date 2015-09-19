@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func action() {
-        println("Button tapped!")
+        print("Button tapped!")
         label.text = "Button tapped!"
     }
 }

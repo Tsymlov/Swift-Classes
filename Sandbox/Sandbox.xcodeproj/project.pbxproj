@@ -156,6 +156,8 @@
 		3D1E182B1BA09BDF005ED90E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Alexey Tsymlov";
 				TargetAttributes = {
