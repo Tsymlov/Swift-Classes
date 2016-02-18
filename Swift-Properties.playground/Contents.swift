@@ -45,3 +45,13 @@ class Message {
         }
     }
 }
+
+struct Constants {
+    static let yandexMapToken = "1234567890"
+}
+print(Constants.yandexMapToken)
+
+class Math {
+    static let pi = 3.14
+}
+print(Math.pi)
