@@ -13,7 +13,7 @@ class Users{
             if (index < items.count) && (index >= 0){
                 items[index] = newValue
             }else{
-                println("Error: Invalid index!")
+                print("Error: Invalid index!")
             }
         }
     }
@@ -26,7 +26,7 @@ let users = Users()
 users.append(User(firstName: "Bill", lastName: "Gates"))
 users.append(User(firstName: "Tim", lastName: "Cook"))
 users[0].lastName = "Jobs"
-println(users[0].firstName! + " " + users[0].lastName!)
+print(users[0].firstName! + " " + users[0].lastName!)
 
 
 class DataTable {
@@ -42,7 +42,7 @@ class DataTable {
 }
 
 let table = DataTable()
-println(table[1, 3])
+print(table[1, 3])
 table[2,0] = 0
 
 class PhonesStore {
@@ -59,8 +59,8 @@ class PhonesStore {
 
 let store = PhonesStore()
 
-println(store["iphn"])
-println(store["smsg", 100])
+print(store["iphn"])
+print(store["smsg", 100])
 
 class SomeClass {
     subscript(var param: Int)->Int{
@@ -74,4 +74,4 @@ class SomeClass {
 }
 
 let some = SomeClass()
-println(some[1,2,3,4,5,6,7])
+print(some[1,2,3,4,5,6,7])

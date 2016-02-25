@@ -9,12 +9,11 @@ class Message {
 }
 
 var msg = Message()
-println("Current text length = \(count(msg.text))")
+print("Current text length = \(msg.text.characters.count)")
 
 
 class User {
-    var firstName: String
-    var lastName: String
+    var firstName, lastName: String
     
     init(){
         firstName = ""
@@ -33,8 +32,12 @@ class User {
 
 let billGates = User(firstName: "Bill", lastName: "Gates")
 var emptyUser = User()
-println(billGates.description)
-println(emptyUser.description)
+print(billGates.description)
+print(emptyUser.description)
+
+class Cargo {
+    var weight: Double?
+}
 
 class Chat {
     let id: Int
@@ -202,7 +205,7 @@ class CarInRussia {
 class LadaKalina: CarInRussia {
     required convenience init(insuranceNumber: String, techPassportNumber: String){
         self.init(insuranceNumber: insuranceNumber)
-        hasTechPassport = count(techPassportNumber) >= 8
+        hasTechPassport = techPassportNumber.characters.count >= 8
     }
 }
 

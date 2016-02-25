@@ -24,6 +24,9 @@ billGates.lastName = ""
 print(billGates.fullName)
 billGates.fullName = "Bill Gates"
 
+let johnAppleseed = User(firstName: "John", lastName: "Appleseed", ID: 2)
+//johnAppleseed.firstName = "Johny" // Ошибка
+
 class FileSystemHelper {
     
     lazy var fm0 = NSFileManager()
@@ -55,3 +58,9 @@ class Math {
     static let pi = 3.14
 }
 print(Math.pi)
+
+enum HTTPMethods{
+    static let maxTTL = 100
+}
+
+HTTPMethods.maxTTL

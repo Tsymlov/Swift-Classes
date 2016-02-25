@@ -41,10 +41,10 @@ class User: Profile {
     override var password: String{
         didSet{
             if password == login{
-                println("Password cannot be equal login!")
+                print("Password cannot be equal login!")
             }
             if password.isEmpty{
-                println("Password cannot be empty!")
+                print("Password cannot be empty!")
             }
         }
     }
@@ -63,14 +63,14 @@ mikeMarculla.contacts.append(johnScally)
 
 //Проверяем переопределение свойства bio.
 johnScally.bio = "Second CEO."
-println(johnScally.bio)
+print(johnScally.bio)
 
 //Проверяем переопределение обозревателя свойства password
 johnScally.login = "scally"
 johnScally.password = "scally"
 johnScally.password = ""
 
-//Проверяем переопределение subscript
+//Проверяем переопределение индексатора
 johnScally[4]
 
 class Company: Profile {

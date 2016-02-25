@@ -12,12 +12,7 @@ class User {
 }
 
 let user = User()
-user.updateContacts({a in println(a)}, failure: {e in println(e)})
-
-func updateContacts(success:([User])->(), failure: (NSError!)->()){
-    //do smth with contacts
-}
-updateContacts({a in println(a)}, {e in println(e)})
+user.updateContacts({a in print(a)}, failure: {e in print(e)})
 
 struct Data {
     var day: Int
@@ -60,7 +55,7 @@ sw.turn()// is On
 
 import CoreData
 class Profile: NSManagedObject {
-    class func entity()->NSEntityDescription{
+    static func entity()->NSEntityDescription{
         // return some entity
         return NSEntityDescription()
     }
