@@ -1,6 +1,6 @@
 class TerminatorModelT_800 {
     deinit{
-        println("I'll be back!")
+        print("I'll be back!")
     }
 }
 
