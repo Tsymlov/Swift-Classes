@@ -50,15 +50,12 @@ var uploadingOps = [UploadContentOperation]()
 
 for op in ops{
     if op is DownloadContentOperation {
-        downloadingOps.append(op as DownloadContentOperation)
-//        downloadingOps.append(op as UploadContentOperation) // Ошибка
-        println(op as? UploadContentOperation)
+        downloadingOps.append(op as! DownloadContentOperation)
+//        downloadingOps.append(op as! UploadContentOperation) // Ошибка
+        print(op as? UploadContentOperation)
     }else if op is UploadContentOperation{
-        uploadingOps.append(op as UploadContentOperation)
+        uploadingOps.append(op as! UploadContentOperation)
     }
-//    if op is NSOperation{
-//        //Ошибка NSOperation is not a subtype os ContentOperation
-//    }
     let o = op as NSOperation
     
 }
